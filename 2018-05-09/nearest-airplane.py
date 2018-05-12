@@ -17,8 +17,8 @@ def get_distance(lat2,lon2):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser('Find details of the plane nearest to you.')
-    parser.add_argument('latitude', type=float)
-    parser.add_argument('longitude', type=float)
+    parser.add_argument('latitude', type=float, nargs='?', default=44.555751)
+    parser.add_argument('longitude', type=float, nargs='?', default=-80.932080)
 
     args = parser.parse_args()
     latitude = args.latitude
